@@ -21,10 +21,11 @@
     <link type="text/css" href="static/css/main.css" rel="stylesheet" />
 
     <style>
+        /* 头像放大样式 */
         #avatar {
-            width: 225px !important;      /* 原始约为 150px, 1.5倍后为 225px */
+            width: 225px !important;
             height: 225px !important;
-            margin-top: -112px !important; /* 负边距调整，原值的一半 */
+            margin-top: -112px !important;
             z-index: 10;
             position: relative;
         }
@@ -32,7 +33,38 @@
             width: 100% !important;
             height: 100% !important;
             object-fit: cover;
-            border-radius: 10px; /* 保持圆角风格 */
+            border-radius: 10px;
+        }
+
+        /* 专门用于导出 PDF 的打印样式优化 */
+        @media print {
+            /* 强制浏览器打印背景颜色和图片 */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            /* 隐藏导航栏和底部不必要的链接 */
+            #mainNav, #github-link, .bi-list {
+                display: none !important;
+            }
+            /* 消除由于隐藏导航栏带来的顶部留白 */
+            body {
+                padding-top: 0 !important;
+            }
+            /* 调整顶部大图在 PDF 中的高度，避免占满整页 */
+            .top-section {
+                min-height: 250px !important;
+                padding-top: 5rem !important;
+                padding-bottom: 5rem !important;
+            }
+            /* 避免内容在分页时被硬切断 */
+            section {
+                page-break-inside: avoid;
+            }
+            /* 缩小边距，让一页能装下更多内容 */
+            @page {
+                margin: 0.5cm;
+            }
         }
     </style>
 
@@ -66,6 +98,11 @@
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#patents">PATENTS</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="#projects">PROJECTS</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3 fw-bold text-primary" href="javascript:window.print()" title="Save page as PDF">
+                            <i class="bi bi-file-earmark-pdf-fill"></i> PDF CV
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
