@@ -3,7 +3,7 @@
 - Mechanism of PKD2L1-calcium channel axis in passive electrical stimulation for spinal cord injury treatment
   <br><strong>National Natural Science Foundation of China (NSFC)</strong> | Jan 2026 - Dec 2028 | <strong>Principal Investigator</strong>
   <br>PKD2L1-钙离子通道轴在脊髓损伤无源电刺激治疗中的作用机制研究
-  <br><strong>国家自然科学基金委员会</strong> | 2026年1月 - 2028年12月 | [cite_start]<strong>项目负责人（主持）</strong> 
+  <br><strong>国家自然科学基金委员会</strong> | 2026年1月 - 2028年12月 | <strong>项目负责人（主持）</strong> 
 
 - Mechanism of PKD2L1-mediated passive electrical stimulation in regulating calcium channels to promote neural functional reconstruction after spinal cord injury
   <br><strong>Capital Medical University</strong> | Jan 2025 - Dec 2025 | <strong>Principal Investigator</strong>
