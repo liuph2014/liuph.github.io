@@ -20,6 +20,22 @@
     <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
     <link type="text/css" href="static/css/main.css" rel="stylesheet" />
 
+    <style>
+        #avatar {
+            width: 225px !important;      /* 原始约为 150px, 1.5倍后为 225px */
+            height: 225px !important;
+            margin-top: -112px !important; /* 负边距调整，原值的一半 */
+            z-index: 10;
+            position: relative;
+        }
+        #avatar img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+            border-radius: 10px; /* 保持圆角风格 */
+        }
+    </style>
+
     <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="static/js/marked.min.js"></script>
     <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
@@ -42,8 +58,7 @@
             <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top">Penghao Liu</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                MENU
-                <i class="bi-list"></i>
+                MENU <i class="bi-list"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
@@ -109,7 +124,7 @@
     <footer class="bg-bottom text-center py-5">
         <div class="container px-5">
             <div class="text-white-50 small">
-                <div id="copyright-text" class="mb-2">&copy; 2026 Penghao Liu. All Rights Reserved.</div>
+                <div id="copyright-text" class="mb-2"></div>
                 <div class="mt-2">
                     <a id="github-link" href="https://github.com/liuph2014">Github</a>
                     <span class="mx-1">&middot;</span>
@@ -120,24 +135,19 @@
     </footer>
 
     <script>
-        // Helper to fetch and parse Markdown files
         async function loadMarkdown(fileName, elementId) {
             try {
                 const response = await fetch(fileName);
-                if (!response.ok) throw new Error(`Status: ${response.status}`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const text = await response.text();
-
-                if (typeof marked !== 'undefined') {
-                    const html = marked.parse ? marked.parse(text) : marked(text);
-                    document.getElementById(elementId).innerHTML = html;
-                }
+                const html = marked.parse ? marked.parse(text) : marked(text);
+                document.getElementById(elementId).innerHTML = html;
             } catch (error) {
                 console.error(`Error loading ${fileName}:`, error);
-                document.getElementById(elementId).innerHTML = `<p style="color:red">Failed to load ${fileName}. Ensure it exists in the 'contents/' folder.</p>`;
+                document.getElementById(elementId).innerHTML = `<p style="color:red">Failed to load ${fileName}. Ensure it exists in 'contents/'.</p>`;
             }
         }
 
-        // Helper to load and apply Config.yml
         async function loadConfig() {
             try {
                 const response = await fetch('contents/config.yml');
@@ -145,31 +155,17 @@
                     const text = await response.text();
                     const data = jsyaml.load(text);
 
-                    // Apply config values to DOM
                     if(data.title) document.title = data.title;
-
-                    if(data['page-top-title']) {
-                        document.getElementById('page-top-title').innerHTML = data['page-top-title'];
-                    }
-
-                    if(data['home-subtitle']) {
-                        document.getElementById('home-subtitle').innerHTML = data['home-subtitle'];
-                    }
-
-                    if(data['top-section-bg-text']) {
-                        document.getElementById('top-section-bg-text').innerText = data['top-section-bg-text'];
-                    }
-
-                    if(data['copyright-text']) {
-                        document.getElementById('copyright-text').innerHTML = data['copyright-text'];
-                    }
+                    if(data['page-top-title']) document.getElementById('page-top-title').innerHTML = data['page-top-title'];
+                    if(data['home-subtitle']) document.getElementById('home-subtitle').innerHTML = data['home-subtitle'];
+                    if(data['top-section-bg-text']) document.getElementById('top-section-bg-text').innerText = data['top-section-bg-text'];
+                    if(data['copyright-text']) document.getElementById('copyright-text').innerHTML = data['copyright-text'];
                 }
             } catch (e) {
-                console.warn("Config loading failed, using default layout.", e);
+                console.warn("Config load failed, using default styles.", e);
             }
         }
 
-        // Initialize Page
         window.onload = function() {
             loadConfig();
             loadMarkdown('contents/home.md', 'home-md');
