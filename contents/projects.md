@@ -33,7 +33,7 @@
 ### Technology Transfer
 
 - Exoskeleton motor-control method based on EMG signals
-  <br><strong>Transferred to: Hangzhou Cheng Tian Technology Development Co., Ltd.</strong> | Jan 2026 | <strong>Key Inventor (Core Contribution)</strong>
+  <br><strong>Transferred to: Hangzhou Cheng Tian Technology Development Co., Ltd.</strong> | Jan 2026 | <strong>Key Inventor (Rank 2)</strong>
 
 - Implantable spinal cord electrical stimulation device
   <br><strong>Transferred to: Beijing Weiji Medical Technology Co., Ltd.</strong> | July 2024 | <strong>Key Inventor (Rank 2)</strong>
