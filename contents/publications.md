@@ -1,16 +1,26 @@
 #### Submitted
 
-- <strong>S. Li</strong>*, X. Yang, S. M. Mousavi, A. Cao, K. Fan, Y. Liu, C. Wang, and Q. Niu. Learning Earthquake Wave Arrival Time Picking from Labels with Inaccuracies. <strong>Under Review</strong> [[Code]](https://github.com/senli1073/LaNCor)
+- <strong>P. Liu</strong>†, X. Wang†, Y. Liu†, Z. Xu, Y. He, Y. Lu, L. Ye, W. Wu, Z. Chen, F. Zhang, X. Yang, Y. Yu*, Q. Cai*,and W. Duan*. A Biodegradable Piezoelectric Vertebral Implant Enables Programmable Electro-neuromodulation in Spinal Cord Injury <strong>Science Advances Under Review</strong> 
 
 #### Published
 
-- X. Yang, <strong>S. Li</strong>, A. Cao*, C. Wang*, Y. Liu, X. Bai, and Q. Niu (2024). Deep Transfer Learning for P-wave Arrival Identification and Automatic Seismic Source Location in Underground Mines. <strong>International Journal of Rock Mechanics and Mining Sciences</strong>. [[Paper]](https://doi.org/10.1016/j.ijrmms.2024.105888)
+- <strong>P. Liu</strong>, F. Zhang, Z. Xu, Y. Lu, Y. He, Z. Dong, Y. Cheng, Z. Chen, and W. Duan* (2026). Deep-Learning Based Multi-Joint Synchronous Tracking for Objective Quantification of Hindlimb Locomotor Kinematics in Rats. <strong>JoVE</strong>. 2026 Feb 5 (epub).
 
-- <strong>S. Li</strong>, X. Yang*, A. Cao*, C. Wang, Y. Liu, Y. Liu, and Q. Niu (2024). SeisT: A Foundational Deep-Learning Model for Earthquake Monitoring Tasks. <strong>IEEE Transactions on Geoscience and Remote Sensing</strong>. [[Paper]](https://doi.org/10.1109/TGRS.2024.3371503) [[Code]](https://github.com/senli1073/SeisT)
+- J. Shen, T. Zhang, J. Chen, F. Chang, L. Yang, Z. Guo, R. Chen, <strong>P. Liu</strong>*, N. Jiang*, and Y. Xie* (2025). Localized and sustained delivery of indomethacin using poly(lactic-co-glycolic acid)-based microspheres to prevent traumatic heterotopic ossification. <strong>Biomater Sci</strong>. 2025 Apr 29;13(9):2381-2393. [[Paper]](https://doi.org/10.1039/D4BM01719F)
 
-- A. Cao, X. Yang, C. Wang*, <strong>S. Li</strong>, Y. Liu, L. Dou, and Q. Niu (2023). High-Precision Phase Picking and Automatic Source Locating Method for Seismicity in Mines Based on Deep Transfer Learning. <strong>Journal of China Coal Society</strong>. [[Paper]](https://doi.org/10.13225/j.cnki.jccs.2023.0095)
+- C. Ding†, <strong>P. Liu</strong>†, Z. Xu, Y. Cheng, H. Yu, L. Cheng, Z. Chen, F. Jian, and W. Duan (2025). Photoacoustic technologies in nervous system disorders: an emerging strategy for neuromodulation. <strong>Neural Regen Res</strong>. 2026 May 1;21(5):1910-1925. [[Paper]](https://doi.org/10.4103/NRR.NRR-D-24-01191)
 
-- A. Cao, Y. Liu, X. Yang*, <strong>S. Li</strong>, C. Wang, X. Bai, and Y. Liu (2022). Physical Index and Data Fusion-Driven Method for Coal Burst Prediction in Time Sequence. <strong>Journal of China Coal Society</strong>. [[Paper]](https://doi.org/10.13225/j.cnki.jccs.2022.0680)
+- <strong>P. Liu</strong>†, Y. Cheng†, Z. Xu, X. Li, Z. Chen, and W. Duan (2025). Spatiotemporal spinal cord stimulation with real-time triggering exoskeleton restores walking capability: a case report. <strong>Ann Clin Transl Neurol</strong>. 2025 Mar;12(3):659-665. [[Paper]](https://doi.org/10.1002/acn3.52281)
 
-- X. Yang, X. Yu, C. Zhang, <strong>S. Li</strong>, and Q. Niu (2021). MineGPS: Battery-Free Localization Base Station for Coal Mine Environment. <strong>IEEE Communications Letters</strong>. [[Paper]](https://doi.org/10.1109/LCOMM.2021.3081593)
+- <strong>P. Liu</strong>†, J. Huang†, W. Duan, T. Song, J. Wang, C. Zhang, Y. Du, Y. Chen, R. Fu, J. Lu, and Z. Chen (2024). FET PET provides adjunctive value to FDG PET in distinction of spinal cord tumors. <strong>Heliyon</strong>. 2024 Jun 21;10(13):e33353. [[Paper]](https://doi.org/10.1016/j.heliyon.2024.e33353)
+
+- N. Yu†, H. Cui†, S. Jin†, <strong>P. Liu</strong>†, Y. Fang, F. Sun, Y. Cao, B. Yuan, Y. Xie, W. Duan, and C. Ma (2024). IL-6 from cerebrospinal fluid causes widespread pain via STAT3-mediated astrocytosis in chronic constriction injury of the infraorbital nerve. <strong>J Neuroinflammation</strong>. 2024 Feb 28;21(1):60. [[Paper]](https://doi.org/10.1186/s12974-024-03053-6)
+
+- <strong>P. Liu</strong>†, J. Huang, J. Lu, Z. Chen, and W. Duan (2023). Postoperative Spinal 18 F-FDG PET Pseudoprogression Mimicking Malignancy. <strong>Clin Nucl Med</strong>. 2023 Aug 1;48(8):702-703. [[Paper]](https://doi.org/10.1097/RLU.0000000000004732)
+
+- X. Yang†, <strong>P. Liu</strong>†, H. Xing, X. Wen, Y. Wang, C. Hu, L. Li, and W. Ma (2022). Skull modulated strategies to intensify tumor treating fields on brain tumor: a finite element study. <strong>Biomech Model Mechanobiol</strong>. 2022 Aug;21(4):1133-1144. [[Paper]](https://doi.org/10.1007/s10237-022-01579-2)
+
+- <strong>P. Liu</strong>†, Y. Wang†, Y. Wang, Z. Kong, W. Chen, J. Li, W. Chen, Y. Tong, W. Ma, and Y. Wang (2022). Effects of oncolytic viruses and viral vectors on immunity in glioblastoma. <strong>Gene Ther</strong>. 2022 Apr;29(3-4):115-126. [[Paper]](https://doi.org/10.1038/s41434-020-00207-9)
+
+
 
