@@ -1,5 +1,5 @@
 
-[![liuph2014](https://img.shields.io/badge/senli1073-github-blue?logo=github)](https://github.com/liuph2014)
+[![liuph2014](https://img.shields.io/badge/liuph2014-github-blue?logo=github)](https://github.com/liuph2014)
 
 He is a neurosurgeon and physician scientist at Xuanwu Hospital, Capital Medical University, and specializing in research on brain-computer interfaces and neuromodulation for spinal cord injury.
 
