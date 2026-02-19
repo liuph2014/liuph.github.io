@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Academic Webpage" />
+    <meta name="description" content="Academic Webpage of Penghao Liu" />
     <meta name="author" content="Penghao Liu" />
     <title>Penghao Liu - Academic Homepage</title>
 
@@ -21,9 +21,7 @@
     <link type="text/css" href="static/css/main.css" rel="stylesheet" />
 
     <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
-
     <script type="text/javascript" src="static/js/marked.min.js"></script>
-
     <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
 
     <script>
@@ -49,18 +47,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#page-top">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#patents">PATENTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#projects">PROJECTS</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#page-top">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#patents">PATENTS</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#projects">PROJECTS</a></li>
                 </ul>
             </div>
         </div>
@@ -85,9 +75,7 @@
             <header>
                 <h2 id="home-subtitle">About Me</h2>
             </header>
-            <div class="main-body" id="home-md">
-                <p class="text-center">Loading content...</p>
-            </div>
+            <div class="main-body" id="home-md"><p class="text-center">Loading content...</p></div>
         </div>
     </section>
 
@@ -96,9 +84,7 @@
             <header>
                 <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
             </header>
-            <div class="main-body" id="publications-md">
-                 <p class="text-center">Loading content...</p>
-            </div>
+            <div class="main-body" id="publications-md"><p class="text-center">Loading content...</p></div>
         </div>
     </section>
 
@@ -107,9 +93,7 @@
             <header>
                 <h2 id="patents-subtitle"><i class="bi bi-gear-fill"></i>&nbsp;PATENTS & COPYRIGHTS</h2>
             </header>
-            <div class="main-body" id="patents-md">
-                 <p class="text-center">Loading content...</p>
-            </div>
+            <div class="main-body" id="patents-md"><p class="text-center">Loading content...</p></div>
         </div>
     </section>
 
@@ -118,9 +102,7 @@
             <header>
                 <h2 id="projects-subtitle"><i class="bi bi-folder-fill"></i>&nbsp;PROJECTS</h2>
             </header>
-            <div class="main-body" id="projects-md">
-                 <p class="text-center">Loading content...</p>
-            </div>
+            <div class="main-body" id="projects-md"><p class="text-center">Loading content...</p></div>
         </div>
     </section>
 
@@ -128,68 +110,73 @@
         <div class="container px-5">
             <div class="text-white-50 small">
                 <div id="copyright-text" class="mb-2">&copy; 2026 Penghao Liu. All Rights Reserved.</div>
-                <a id="github-link" href="https://github.com/liupenghao">Github</a>
-                <span class="mx-1">&middot;</span>
+                <div class="mt-2">
+                    <a id="github-link" href="https://github.com/liuph2014">Github</a>
+                    <span class="mx-1">&middot;</span>
+                    <a href="mailto:liuph14@hotmail.com">Email</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Helper function to fetch and render Markdown
+        // Helper to fetch and parse Markdown files
         async function loadMarkdown(fileName, elementId) {
             try {
-                // Fetching from the 'contents/' directory now
                 const response = await fetch(fileName);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
+                if (!response.ok) throw new Error(`Status: ${response.status}`);
                 const text = await response.text();
 
                 if (typeof marked !== 'undefined') {
-                    // Compatible with newer and older marked.js versions
                     const html = marked.parse ? marked.parse(text) : marked(text);
                     document.getElementById(elementId).innerHTML = html;
-                } else {
-                    document.getElementById(elementId).innerText = "Error: Marked.js library not loaded.";
                 }
             } catch (error) {
                 console.error(`Error loading ${fileName}:`, error);
-                // Detailed error message for debugging
-                document.getElementById(elementId).innerHTML = `<p style="color:red">Failed to load ${fileName}. <br>Please ensure the file exists in the 'contents' folder.</p>`;
+                document.getElementById(elementId).innerHTML = `<p style="color:red">Failed to load ${fileName}. Ensure it exists in the 'contents/' folder.</p>`;
             }
         }
 
-        // Helper function to load Config
+        // Helper to load and apply Config.yml
         async function loadConfig() {
             try {
-                // Also looking in 'contents/' for config.yml
                 const response = await fetch('contents/config.yml');
                 if (response.ok) {
                     const text = await response.text();
                     const data = jsyaml.load(text);
-                    if(data.title) {
-                        document.title = data.title;
-                        document.getElementById('page-top-title').innerText = data.title;
+
+                    // Apply config values to DOM
+                    if(data.title) document.title = data.title;
+
+                    if(data['page-top-title']) {
+                        document.getElementById('page-top-title').innerHTML = data['page-top-title'];
                     }
-                    if(data.description) document.getElementById('home-subtitle').innerText = data.description;
+
+                    if(data['home-subtitle']) {
+                        document.getElementById('home-subtitle').innerHTML = data['home-subtitle'];
+                    }
+
+                    if(data['top-section-bg-text']) {
+                        document.getElementById('top-section-bg-text').innerText = data['top-section-bg-text'];
+                    }
+
+                    if(data['copyright-text']) {
+                        document.getElementById('copyright-text').innerHTML = data['copyright-text'];
+                    }
                 }
             } catch (e) {
-                console.log("Config not found or error parsing, using defaults.");
+                console.warn("Config loading failed, using default layout.", e);
             }
         }
 
-        // Execution on Load
+        // Initialize Page
         window.onload = function() {
-            // 1. Load Config
             loadConfig();
-
-            // 2. Load Content Files from the 'contents' folder
             loadMarkdown('contents/home.md', 'home-md');
             loadMarkdown('contents/publications.md', 'publications-md');
             loadMarkdown('contents/patents.md', 'patents-md');
             loadMarkdown('contents/projects.md', 'projects-md');
         };
     </script>
-
 </body>
 </html>
